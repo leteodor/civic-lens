@@ -103,13 +103,36 @@ body.dark-mode {
 
 /* ///ADD/// Navigation Styles */
 
+.mobile-nav {
+  text-align: center;
+}
+
+.mobile-nav ul {
+  display: none;
+}
+
+.mobile-nav label {
+  display: inline-block;
+  font-family: var(--font-body);
+  color: var(--watchdog-white);
+  background-color: var(--news-flash);
+  width: 85%;
+  padding: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
 /* ///ADD/// Global Layout Styles */
 
 /* ///ADD/// Global Text Styles */
 
 
 /* ///ADD/// medium styles 620px */
-
+/* nav label {
+  visibility: hidden;
+} */
 
 /* ///ADD/// large styles 920px */
 
