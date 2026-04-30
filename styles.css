@@ -109,8 +109,6 @@ body.dark-mode {
   font-weight: 500;
   font-size: 1em;
   text-transform: uppercase;
-  width: 90%;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -165,9 +163,21 @@ body.dark-mode {
 }
 
 /* ///ADD/// Global Layout Styles */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 header, footer {
-  background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
+  background-color: var(--blue-bulletin);
+}
+
+main {
+  color: var(--truth-text);
+  background-color: var(--watchdog-white);
 }
 
 /* ///ADD/// Global Text Styles */
