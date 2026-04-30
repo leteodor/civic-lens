@@ -128,6 +128,7 @@ body.dark-mode {
   color: var(--watchdog-white);
   background-color: var(--news-flash);
   border: 2px solid var(--blue-bulletin);
+  transition: 0.5s ease;
 }
 
 .menu a {
@@ -143,26 +144,6 @@ body.dark-mode {
 
 .menu-button:hover, .menu a:hover {
   background-color: var(--blue-bulletin);
-  transition: 0.25s ease-in;
-}
-
-@media screen and (min-width: 620px) {
-  .menu-button{
-    display: none;
-  }
-  .menu {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    position: relative;
-    margin-bottom: 5px;
-  }
-  .menu a {
-    border: 2px solid var(--blue-bulletin); 
-  }
-  .menu a:hover {
-    border: 2px solid var(--news-flash);
-  }
 }
 
 /* ///ADD/// Global Layout Styles */
@@ -198,13 +179,6 @@ main {
   margin: 0 auto;
 }
 
-@media screen and (min-width:620px) {
-  .flex-container {
-    flex-direction: row;
-    gap: 1rem;
-  }
-}
-
 .flex-container section {
   background-color: var(--news-flash);
   color: var(--watchdog-white);
@@ -220,6 +194,19 @@ hr {
 
 video {
   width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.flex-item, .grid-item {
+  transition: 0.3s ease;
+}
+
+.flex-item:hover, .grid-item:hover {
+  transform: scale(1.04);
 }
 
 /* ///ADD/// Global Text Styles */
@@ -276,8 +263,8 @@ footer a {
   text-decoration: none;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
-  border: 1.5px solid var(--blue-bulletin);
-  padding: .65rem .4rem;
+  border: 1px solid var(--blue-bulletin);
+  padding: .7rem .4rem;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: .9rem;
@@ -287,7 +274,7 @@ footer a {
 
 footer a:hover {
   background-color: var(--blue-bulletin);
-  border: 1.5px solid var(--news-flash);
+  border: 1px solid var(--news-flash);
   transition: 0.25s ease-in;
 }
 
@@ -298,9 +285,40 @@ footer p {
 }
 
 /* ///ADD/// medium styles 620px */
-
+@media screen and (min-width:620px) {
+  .menu-button{
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .menu a {
+    border: 2px solid var(--blue-bulletin); 
+  }
+  .menu a:hover {
+    border: 2px solid var(--news-flash);
+  }
+  .flex-container {
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /* ///ADD/// large styles 920px */
+@media screen and (min-width:920px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 
 /* ///ADD/// x-large styles 1024px */
