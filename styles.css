@@ -114,7 +114,7 @@ body.dark-mode {
 
 .menu-button {
   display: block;
-  padding: .6rem;
+  padding: .7rem;
   margin-bottom: 5px;
 }
 
@@ -132,7 +132,7 @@ body.dark-mode {
 
 .menu a {
   display: block;
-  padding: .6rem;
+  padding: .7rem;
   border-top: none;
   text-decoration: none;
 }
@@ -157,8 +157,11 @@ body.dark-mode {
     position: relative;
   }
   .menu a {
-    padding: .6rem .4rem;
-    border: 2px solid var(--news-flash); 
+    padding: .7rem .4rem;
+    border: 2px solid var(--blue-bulletin); 
+  }
+  .menu a:hover {
+    border: 2px solid var(--news-flash);
   }
 }
 
@@ -175,6 +178,10 @@ header, footer {
   background-color: var(--blue-bulletin);
 }
 
+nav {
+  padding: 1rem 0 .75rem;
+}
+
 main {
   color: var(--truth-text);
   background-color: var(--watchdog-white);
@@ -183,12 +190,16 @@ main {
 /* ///ADD/// Global Text Styles */
 h1 {
   font-family: var(--font-heading);
-  font-size: 2.5em;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 0;
 }
 
 header p {
   font-family: var(--font-heading);
-  font-size: .8em;
+  font-size: .85rem;
+  font-weight: 600;
+  transform: scaleY(1.1);
 }
 
 
