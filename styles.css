@@ -103,11 +103,11 @@ body.dark-mode {
 
 /* ///ADD/// Navigation Styles */
 
-
 .mobile-nav {
   text-align: center;
   font-family: var(--font-body);
   font-weight: 500;
+  font-size: 1em;
   text-transform: uppercase;
   width: 85%;
   margin: 0 auto;
@@ -116,66 +116,37 @@ body.dark-mode {
 
 .menu-button {
   display: block;
-  border: 2px solid var(--news-flash); 
   padding: .6rem;
+  margin-bottom: 5px;
 }
 
 .menu {
   display: none;
-  margin-top: 5px;
   width: 100%;
   position: absolute;
-}
-
-.menu a {
-  display: block;
-  padding: .6rem;
-  border: 2px solid var(--blue-bulletin);
-  border-top: none;
-  text-decoration: none;
 }
 
 .menu-button, .menu a {
   color: var(--watchdog-white);
   background-color: var(--news-flash);
+  border: 2px solid var(--blue-bulletin);
 }
 
-
-/* .mobile-nav label {
-  display: inline-block;
-  border: 2px solid var(--news-flash);
-  margin-bottom: 5px;
-} */
-
-/* .mobile-nav ul {
-  visibility: hidden;
-} */
-/* OR */
-/* .menu {
-  visibility: hidden;
-} */
-/* ??? */
-/* .mobile-nav:hover ul{
-  visibility: visible;
-  transition-delay: 1s;
-} */
-
-
-/* .mobile-nav a {
+.menu a {
   display: block;
-  margin: 0 auto;
-  cursor: pointer;
+  padding: .6rem;
+  border-top: none;
   text-decoration: none;
-  border: 3px solid var(--blue-bulletin);
-  border-top: 0px;
 }
-*/
 
-/*
-.mobile-nav a:hover, .mobile-nav label:hover {
+.menu-button:hover {
+  border: 2px solid var(--news-flash); 
+}
+
+.menu-button:hover, .menu a:hover {
   background-color: var(--blue-bulletin);
-  transition: 0.3s ease-in;
-} */ 
+  transition: 0.25s ease-in;
+}
 
 @media (min-width: 620px) {
   .menu-button{
@@ -186,10 +157,9 @@ body.dark-mode {
     flex-direction: row;
     gap: 1rem;
     position: relative;
-    margin-top: none;
   }
   .menu a {
-    padding: .6rem .2rem;
+    padding: .6rem .4rem;
     border: 2px solid var(--news-flash); 
   }
 }
