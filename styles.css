@@ -114,7 +114,7 @@ body.dark-mode {
 
 .menu-button {
   display: block;
-  padding: .7rem;
+  padding: .8rem;
   margin-bottom: 5px;
 }
 
@@ -127,18 +127,18 @@ body.dark-mode {
 .menu-button, .menu a {
   color: var(--watchdog-white);
   background-color: var(--news-flash);
-  border: 1.5px solid var(--blue-bulletin);
+  border: 2px solid var(--blue-bulletin);
 }
 
 .menu a {
   display: block;
-  padding: .7rem;
+  padding: .8rem ;
   border-top: none;
   text-decoration: none;
 }
 
 .menu-button:hover {
-  border: 1.5px solid var(--news-flash); 
+  border: 2px solid var(--news-flash); 
 }
 
 .menu-button:hover, .menu a:hover {
@@ -146,7 +146,7 @@ body.dark-mode {
   transition: 0.25s ease-in;
 }
 
-@media (min-width: 620px) {
+@media screen and (min-width: 620px) {
   .menu-button{
     display: none;
   }
@@ -155,13 +155,13 @@ body.dark-mode {
     flex-direction: row;
     gap: 1rem;
     position: relative;
+    margin-bottom: 5px;
   }
   .menu a {
-    padding: .7rem .4rem;
-    border: 1.5px solid var(--blue-bulletin); 
+    border: 2px solid var(--blue-bulletin); 
   }
   .menu a:hover {
-    border: 1.5px solid var(--news-flash);
+    border: 2px solid var(--news-flash);
   }
 }
 
@@ -179,12 +179,47 @@ header, footer {
 }
 
 nav {
-  padding: 1rem 0 .75rem;
+  padding: .75rem 0;
 }
 
 main {
   color: var(--truth-text);
   background-color: var(--watchdog-white);
+  padding: 1.5rem 0 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: .4rem;
+  padding-top: .4rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:620px) {
+  .flex-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.flex-container section {
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  border: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+  padding: .9rem;
+  flex: 1;
+}
+
+hr {
+  margin: 0 0 .2rem;
+}
+
+video {
+  width: 100%;
 }
 
 /* ///ADD/// Global Text Styles */
@@ -192,7 +227,7 @@ h1 {
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 300;
-  padding: 1.5rem 0 1rem;
+  padding: 1.5rem 0 .5rem;
 }
 
 header p {
@@ -209,7 +244,7 @@ h2 {
   padding-top: 1.5rem;
 }
 
-.tagline {
+blockquote {
   font-family: var(--font-heading);
   text-align: center;
   font-weight: 800;
@@ -220,12 +255,14 @@ h2 {
 
 h3 {
   font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 p {
   font-family: var(--font-body);
   font-size: .9rem;
-  line-height: 1.4;
+  line-height: 1.5;
   padding-top: .4rem;
   font-weight: 400;
 }
@@ -260,10 +297,6 @@ footer p {
   font-size: .9rem;
 }
 
-main {
-  padding: 1.5rem 0 1rem;
-}
-
 /* ///ADD/// medium styles 620px */
 
 
@@ -280,5 +313,6 @@ main {
 @supports (selector(:has(*))) {
   .mobile-nav:has(#menu-toggle:checked) .menu {
     display: block;
+    box-shadow: var(--shadow);
   }
 }
