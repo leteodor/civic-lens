@@ -165,6 +165,10 @@ body.dark-mode {
 }
 
 /* ///ADD/// Global Layout Styles */
+header, footer {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+}
 
 /* ///ADD/// Global Text Styles */
 
