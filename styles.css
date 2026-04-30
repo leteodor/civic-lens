@@ -171,6 +171,15 @@ header, footer {
 }
 
 /* ///ADD/// Global Text Styles */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5em;
+}
+
+header p {
+  font-family: var(--font-heading);
+  font-size: .8em;
+}
 
 
 /* ///ADD/// medium styles 620px */
