@@ -149,7 +149,7 @@ body.dark-mode {
 /* ///ADD/// Global Layout Styles */
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   width: 90%;
 }
@@ -173,18 +173,15 @@ main {
   display: flex;
   flex-direction: column;
   width: 95%;
-  gap: .4rem;
-  padding-top: .4rem;
+  gap: .5rem;
+  padding-top: .5rem;
   justify-content: center;
   margin: 0 auto;
 }
 
-.flex-container section {
+.flex-item {
   background-color: var(--news-flash);
   color: var(--watchdog-white);
-  border: 1px solid var(--truth-text);
-  box-shadow: var(--shadow);
-  padding: .9rem;
   flex: 1;
 }
 
@@ -199,9 +196,16 @@ video {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: .5rem;
+  gap: .5rem;
 }
 
 .flex-item, .grid-item {
+  border: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+  padding: .9rem;
   transition: 0.3s ease;
 }
 
@@ -305,10 +309,14 @@ footer p {
   .flex-container {
     flex-direction: row;
     gap: 1rem;
-    padding-top: 1rem;
+    padding: 1.2rem 0 .8rem;
+    width: 98%;
   }
   .grid-container {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.2rem 0 .8rem;
+    width: 98%;
   }
 }
 
