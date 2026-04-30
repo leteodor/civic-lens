@@ -205,18 +205,17 @@ header p {
 h2 {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-
   font-weight: 400;
-  padding: 1.5rem 0 .2rem;
+  padding-top: 1.5rem;
 }
 
-blockquote {
+.tagline {
   font-family: var(--font-heading);
   text-align: center;
   font-weight: 800;
   font-size: .85rem;
   transform: scaleY(1.1);
-  padding: 1rem 0;
+  padding: 1.2rem 0 .7rem;
 }
 
 h3 {
@@ -225,6 +224,10 @@ h3 {
 
 p {
   font-family: var(--font-body);
+  font-size: .9rem;
+  line-height: 1.4;
+  padding-top: .4rem;
+  font-weight: 400;
 }
 
 footer h2 {
@@ -255,6 +258,10 @@ footer p {
   padding: 1rem 0;
   text-align: center;
   font-size: .9rem;
+}
+
+main {
+  padding: 1.5rem 0 1rem;
 }
 
 /* ///ADD/// medium styles 620px */
