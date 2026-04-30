@@ -103,27 +103,65 @@ body.dark-mode {
 
 /* ///ADD/// Navigation Styles */
 
+
 .mobile-nav {
   text-align: center;
   font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
 }
 
-.mobile-nav ul {
-  visibility: hidden;
+.menu-button {
+  display: block;
+  border: 2px solid var(--news-flash); 
+  padding: .6rem;
 }
 
-.mobile-nav:hover ul{
-  visibility: visible;
-  transition-delay: 1s;
+.menu {
+  display: none;
+  margin-top: 5px;
+  width: 100%;
+  position: absolute;
 }
 
-.mobile-nav label {
+.menu a {
+  display: block;
+  padding: .6rem;
+  border: 2px solid var(--blue-bulletin);
+  border-top: none;
+  text-decoration: none;
+}
+
+.menu-button, .menu a {
+  color: var(--watchdog-white);
+  background-color: var(--news-flash);
+}
+
+
+/* .mobile-nav label {
   display: inline-block;
   border: 2px solid var(--news-flash);
   margin-bottom: 5px;
-}
+} */
 
-.mobile-nav a {
+/* .mobile-nav ul {
+  visibility: hidden;
+} */
+/* OR */
+/* .menu {
+  visibility: hidden;
+} */
+/* ??? */
+/* .mobile-nav:hover ul{
+  visibility: visible;
+  transition-delay: 1s;
+} */
+
+
+/* .mobile-nav a {
   display: block;
   margin: 0 auto;
   cursor: pointer;
@@ -131,22 +169,30 @@ body.dark-mode {
   border: 3px solid var(--blue-bulletin);
   border-top: 0px;
 }
+*/
 
-.mobile-nav label, .mobile-nav a {
-  color: var(--watchdog-white);
-  background-color: var(--news-flash);
-  width: 85%;
-  padding: .8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-}
-
+/*
 .mobile-nav a:hover, .mobile-nav label:hover {
   background-color: var(--blue-bulletin);
   transition: 0.3s ease-in;
-}
+} */ 
 
+@media (min-width: 620px) {
+  .menu-button{
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    margin-top: none;
+  }
+  .menu a {
+    padding: .6rem .2rem;
+    border: 2px solid var(--news-flash); 
+  }
+}
 
 /* ///ADD/// Global Layout Styles */
 
@@ -169,5 +215,7 @@ body.dark-mode {
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  .mobile-nav:has(#menu-toggle:checked) .menu {
+    display: block;
+  }
 }
