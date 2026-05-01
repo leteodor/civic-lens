@@ -254,6 +254,29 @@ p {
   font-weight: 400;
 }
 
+form {
+  background-color: var(--news-flash);
+  border: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+  padding: .9rem .9rem 1.5rem;
+  color: var(--watchdog-white);
+  font-family: var(--font-body);
+  font-size: .75rem;
+}
+
+.form-container {
+  width: 95%;
+  margin: .4rem auto;
+}
+
+#full-name, #my-phone {
+  display: block;
+  width: 97%;
+  padding: .4rem;
+  margin: .1rem 0 .9rem;
+}
+
+
 footer h2 {
   padding-top: 2.5rem;
 }
@@ -312,6 +335,9 @@ footer p {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 1.2rem 0 .8rem;
+    width: 98%;
+  }
+  .form-container {
     width: 98%;
   }
 }
