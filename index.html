@@ -171,11 +171,18 @@
             <div class="form-container">
               <form action="https://wp.zybooks.com/form-viewer.php" method="post">
                 
-                <label for="full-name">Name</label>
-                <input type="text" name="full-name" id="full-name">
+                <div class="name-mobile-grid">
 
-                <label for="my-phone">Mobile</label>
-                <input type="tel" name="my-phone" id="my-phone">
+                  <div>
+                    <label for="full-name">Name</label>
+                    <input type="text" name="full-name" id="full-name" required>
+                  </div>
+
+                  <div>
+                    <label for="my-phone">Mobile</label>
+                    <input type="tel" name="my-phone" id="my-phone" required>
+                  </div>
+                </div>
               
                 <fieldset>
                   <legend>Notification Preferences</legend>
@@ -229,14 +236,17 @@
     <footer>
       <div class="wrapper">
 
-        <h2>Follow Us</h2>
-          <a href="#">Twitter/X</a>
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
-          <a href="#">TikTok</a>
-          <a href="#">LinkedIn</a>
+        <section id="social">
+          <h2>Follow Us</h2>
+            <a href="#">Twitter/X</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">TikTok</a>
+            <a href="#">LinkedIn</a>
           
-          <p>&copy; 2025 Civic Lens. All rights reserved.</p>
+        </section>
+
+        <p>&copy; 2025 Civic Lens. All rights reserved.</p>
 
       </div>
 
