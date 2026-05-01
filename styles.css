@@ -157,9 +157,12 @@ nav {
   padding: .75rem 0;
 }
 
-main {
+body {
   color: var(--truth-text);
   background-color: var(--watchdog-white);
+}
+
+main {
   padding: 1.5rem 0 1rem;
 }
 
@@ -201,6 +204,7 @@ video {
   box-shadow: var(--shadow);
   padding: 1rem;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .flex-item:hover, .grid-item:hover {
@@ -404,7 +408,25 @@ footer p {
 }
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--truth-text);
+    background-color: var(--watchdog-white);
+  }
+}
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flex-item:hover, .grid-item:hover {
+    transform: none;
+  }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
